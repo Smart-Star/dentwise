@@ -19,7 +19,7 @@ export const syncUser = async () => {
         email: user.emailAddresses[0].emailAddress,
         firstName: user.firstName,
         lastName: user.lastName,
-        phone: user.phoneNumbers[0].phoneNumber,
+        phone: user.phoneNumbers[0]?.phoneNumber,
       },
     });
 

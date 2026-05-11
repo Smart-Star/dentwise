@@ -57,14 +57,18 @@ export function Hero() {
               <div className='flex flex-col sm:flex-row gap-4'>
                 <SignInButton mode='modal'>
                   <Button size='lg'>
-                    <MicIcon className='mr-2 size-5' />
-                    Try voice agent
+                    <span className='flex gap-2'>
+                      <MicIcon className='mr-2 size-5' />
+                      Try voice agent
+                    </span>
                   </Button>
                 </SignInButton>
                 <SignInButton mode='modal'>
                   <Button variant='outline' size='lg'>
-                    <CalendarIcon className='mr-2 size-5' />
-                    Book appointment
+                    <span className='flex gap-2'>
+                      <CalendarIcon className='mr-2 size-5' />
+                      Book appointment
+                    </span>
                   </Button>
                 </SignInButton>
               </div>
