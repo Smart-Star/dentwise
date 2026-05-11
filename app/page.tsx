@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+import { currentUser } from "@clerk/nextjs/server";
 import { CTA } from "@/components/landing-page/cts";
 import { Hero } from "@/components/landing-page/hero";
 import { Header } from "@/components/landing-page/header";
@@ -6,7 +8,12 @@ import { WhatToAsk } from "@/components/landing-page/what-to-ask";
 import { HowItWorks } from "@/components/landing-page/how-it-works";
 import { PricingSection } from "@/components/landing-page/pricing-section";
 
-export default function Home() {
+export default async function Home() {
+  const user = await currentUser();
+
+  // redirect authenticated user to dasboard
+  if (user) redirect("/dasboard");
+
   return (
     <div className='min-h-screen bg-background'>
       <Header />
