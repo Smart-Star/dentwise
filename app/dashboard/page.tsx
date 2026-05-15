@@ -1,3 +1,10 @@
+import { Navbar } from "@/components/navbar";
+
 export default function DashboardPage() {
-  return <div className='text-4xl'>Dahsboard page</div>;
+  return (
+    <div className=''>
+      <Navbar />
+      Dahsboard page
+    </div>
+  );
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { nav_links } from ".";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { landing_page_nav_links } from ".";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 export function Header() {
@@ -20,7 +20,7 @@ export function Header() {
         </Link>
 
         <div className='hidden md:flex items-center gap-8'>
-          {nav_links.map((link) => (
+          {landing_page_nav_links.map((link) => (
             <Link
               key={link.label}
               href={link.href}
