@@ -1,6 +1,6 @@
 import { PricingPlans } from "@/types/landing-page.types";
 
-export const nav_links = [
+export const landing_page_nav_links = [
   { href: "#how-it-works", label: "How it Works" },
   { href: "#pricing", label: "Pricing" },
   { href: "#about", label: "ABout" },
