@@ -1,5 +1,14 @@
 "use client";
 
+import {
+  Dot,
+  Users,
+  Clock,
+  Calendar,
+  UserCheck,
+  SettingsIcon,
+} from "lucide-react";
+
 import { Navbar } from "../navbar";
 import { useUser } from "@clerk/nextjs";
 import { LoadingUI } from "./loading-ui";
@@ -8,7 +17,6 @@ import { WelcomeBanner } from "./welcome-banner";
 import { useGetDoctors } from "@/hooks/use-doctors";
 import { DoctorsManagement } from "./doctor-management";
 import { useGetAppointments } from "@/hooks/use-appointments";
-import { Users, Calendar, UserCheck, Clock } from "lucide-react";
 
 export function AdminDashboard() {
   const { user } = useUser();
@@ -32,9 +40,15 @@ export function AdminDashboard() {
     <div className='min-h-screen bg-background'>
       <Navbar />
 
-      <div className='max-w-7xl mx-auto px-6 pt-24'>
+      <section className='max-w-7xl mx-auto px-6 pt-24'>
         {/* Admin welcome section */}
-        <WelcomeBanner user={user} />
+        <WelcomeBanner
+          BadgeIcon={Dot}
+          badgeTitle='Admin Dashboard'
+          title={`Welcome back, ${user?.firstName || "Admin"}!`}
+          description='Manage doctors, oversee appointments, and monitor your dental practice performance.'
+          Icon={SettingsIcon}
+        />
 
         {/* Admin stats */}
         <div className='grid md:grid-cols-4 gap-6 mb-12'>
@@ -62,7 +76,7 @@ export function AdminDashboard() {
 
         {/* Doctor management */}
         <DoctorsManagement />
-      </div>
+      </section>
     </div>
   );
 }
