@@ -29,7 +29,7 @@ export function FeatureCard() {
           </CardHeader>
           <CardContent className='relative space-y-4'>
             {item.features.map((feature) => (
-              <React.Fragment key={feature.label + "feature"}>
+              <React.Fragment key={feature.label + "voice-feature"}>
                 {feature.Icon ? (
                   <div className='flex items-center p-3 bg-muted/30 rounded-xl'>
                     <div className='w-8 h-8 bg-linear-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center mr-3'>

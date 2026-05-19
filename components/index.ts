@@ -4,6 +4,7 @@ import {
   CrownIcon,
   ShieldIcon,
   CalendarIcon,
+  MessageSquareIcon,
 } from "lucide-react";
 
 import {
@@ -119,5 +120,38 @@ export const voice_features_card: VoiceFeaturesCard[] = [
       { Icon: ShieldIcon, label: "AI-Powered Responses" },
       { Icon: CalendarIcon, label: "Conversation History" },
     ],
+  },
+];
+
+export const dashboard_main_actions = [
+  {
+    id: "voice",
+    imageSrc: "/audio.png",
+    imageAlt: "Voice AI",
+    title: "AI Voice Assistant",
+    description: "Get instant dental advice through voice calls",
+    features: [
+      "24/7 availability",
+      "Professional dental guidance",
+      "Instant pain relief advice",
+    ],
+    buttonLink: "/voice",
+    buttonIcon: MessageSquareIcon,
+    buttonText: "Start Voice Call",
+  },
+  {
+    id: "appointment",
+    imageSrc: "/calendar.png",
+    imageAlt: "Calendar",
+    title: "Book Appointment",
+    description: "Schedule with verified dentists in your area",
+    features: [
+      "Verified dental professionals",
+      "Flexible scheduling",
+      "Instant confirmations",
+    ],
+    buttonLink: "/appointments",
+    buttonIcon: CalendarIcon,
+    buttonText: "Schedule Now",
   },
 ];
