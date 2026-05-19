@@ -198,3 +198,42 @@
     cursor: pointer;
   }
 }
+
+/* AI-Assistant animation */
+@keyframes sound-wave {
+  0%,
+  100% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(var(--wave-height, 1));
+  }
+}
+
+.animate-sound-wave {
+  animation: sound-wave 1.2s ease-in-out infinite;
+  /* transform-origin ensures the bars bounce from the center outwards */
+  transform-origin: center;
+}
+
+/* Remove scrollbar for the message container */
+@utility remove-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent !important;
+    border-radius: 0px !important;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: transparent !important;
+  }
+}

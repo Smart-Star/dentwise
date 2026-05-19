@@ -1,4 +1,3 @@
-import { ADMIN_EMAIL } from "@/env";
 import { redirect } from "next/navigation";
 import { currentUser } from "@clerk/nextjs/server";
 import { AdminDashboard } from "@/components/admin/admin-dashboard";
@@ -9,7 +8,7 @@ export default async function Admin() {
   // user is not logged in
   if (!user) redirect("/");
 
-  const adminEmail = ADMIN_EMAIL;
+  const adminEmail = process.env.ADMIN_EMAIL;
   const userEmail = user.emailAddresses[0]?.emailAddress;
 
   // user is not the admin
