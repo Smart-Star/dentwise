@@ -1,8 +1,17 @@
 import {
-  AddNewDoctorFormControlsType,
+  MicIcon,
+  HomeIcon,
+  CrownIcon,
+  ShieldIcon,
+  CalendarIcon,
+} from "lucide-react";
+
+import {
   FormFieldType,
+  AddNewDoctorFormControlsType,
 } from "@/types/admin.types";
-import { CalendarIcon, CrownIcon, HomeIcon, MicIcon } from "lucide-react";
+
+import { VoiceFeaturesCard } from "@/types/voice.types";
 
 export const nav_links = [
   {
@@ -79,6 +88,36 @@ export const add_new_doctor_form_controls: AddNewDoctorFormControlsType[] = [
     selectItem: [
       { value: "Active", label: "Active" },
       { value: "Inactive", label: "Inactive" },
+    ],
+  },
+];
+
+export const voice_upgrage_features: string[] = [
+  "24/7 voice consultations",
+  "Professional dental guidance",
+  "Instant pain relief advice",
+];
+
+export const voice_features_card: VoiceFeaturesCard[] = [
+  {
+    title: "Features",
+    titleIcon: ShieldIcon,
+    description: "Advanced capabilities for dental care",
+    features: [
+      { label: "Click the microphone button to start talking" },
+      { label: "Ask questions about dental health and treatments" },
+      { label: "Get instant voice responses from the AI" },
+      { label: "View conversation transcript in real-time" },
+    ],
+  },
+  {
+    title: "How to Use",
+    titleIcon: MicIcon,
+    description: "Simple steps to get started with voice assistance",
+    features: [
+      { Icon: MicIcon, label: "Real-time Voice Recognition" },
+      { Icon: ShieldIcon, label: "AI-Powered Responses" },
+      { Icon: CalendarIcon, label: "Conversation History" },
     ],
   },
 ];

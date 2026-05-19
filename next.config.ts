@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         port: "",
       },
       {
-        hostname: "avatar.iran.liara.run",
+        hostname: "img.clerk.com",
         protocol: "https",
         port: "",
       },

@@ -12,7 +12,7 @@ export default async function Home() {
   const user = await currentUser();
 
   // redirect authenticated user to dasboard
-  if (user) redirect("/dasboard");
+  if (user) redirect("/dashboard");
 
   return (
     <div className='min-h-screen bg-background'>
